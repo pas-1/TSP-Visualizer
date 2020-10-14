@@ -1,6 +1,6 @@
 # Travelling Salesman Visualizer
 
-## Live Demo - Try it out yourself!
+## Live Demo
 
 tba
 
