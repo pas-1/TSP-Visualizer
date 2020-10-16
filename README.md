@@ -15,7 +15,7 @@ tba
 
 ## Built with
 
-HTML
-CSS
-Bootstrap
-Vanilla JavaScript
+-   HTML
+-   CSS
+-   Bootstrap
+-   Vanilla JavaScript
