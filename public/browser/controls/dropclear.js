@@ -10,6 +10,9 @@ function changeDropPins() {
         dropPins.innerHTML = ''
         dropPins.innerHTML = `<span><i class="fas fa-map-pin"></i> Drop Pins</span>`
     }
+    // Remove existing layer ids:
+    map.removeLayer('number')
+    map.removeSource('number')
 }
 
 function removeLastPin() {
@@ -18,6 +21,9 @@ function removeLastPin() {
         elements[0].parentNode.removeChild(elements[0].parentNode.lastChild)
         containerPins.pop()
     } else alert('No Pins on the Map! 🏳️')
+    // Remove existing layer ids:
+    map.removeLayer('number')
+    map.removeSource('number')
 }
 
 function deleteDropPins() {
@@ -31,6 +37,9 @@ function deleteDropPins() {
         }
         containerPins.length = 0
     }
+    // Remove existing layer ids:
+    map.removeLayer('number')
+    map.removeSource('number')
 }
 
 // Event Listeners

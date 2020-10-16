@@ -8,10 +8,6 @@
         />
         <link rel="stylesheet" href="./public/styling/style.css" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap"
-            rel="stylesheet"
-        />
-        <link
             rel="icon"
             type="image/png"
             href="./public/styling/favicons/favicon.ico"
@@ -31,7 +27,7 @@
             integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
             crossorigin="anonymous"
         />
-        <title>Travelling Salesman Visualizer</title>
+        <title>Travelling-Salesman-Visualizer</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="navbar">
@@ -64,11 +60,10 @@
                             class="dropdown-menu"
                             aria-labelledby="navbarDropdownMenuLink"
                         >
-                            <a class="dropdown-item" href="#">Algo1</a>
-                            <a class="dropdown-item" href="#">Algo2</a>
-                            <a class="dropdown-item" href="#">Algo3</a>
-                            <a class="dropdown-item" href="#">Algo4</a>
-                            <a class="dropdown-item" href="#">Algo5</a>
+                            <a class="dropdown-item" href="#">Depth First Search</a>
+                            <a class="dropdown-item" href="#">Lexicographic Ordering</a>
+                            <a class="dropdown-item" href="#">Two-Opt Search</a>
+                            <a class="dropdown-item" href="#">Genetic Algorithm</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -78,7 +73,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"
-                            ><i class="fas fa-question-circle"></i> Tutorial</a
+                            ><i class="fas fa-question-circle"></i> Help</a
                         >
                     </li>
                 </ul>
@@ -100,7 +95,7 @@
             <button type="button" class="btn btn-info" id="clear-btn">
                 <span><i class="fas fa-map"></i></i> Clear Map</span>
             </button>
-            <button type="button" class="btn btn-primary" id="start-btn">
+            <button type="button" class="btn btn-danger" id="start-btn">
                 <span><i class="fas fa-rocket"></i> Visualize Path!</span>
             </button>
         </div>
@@ -120,18 +115,18 @@
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"
         ></script>
-        <!-- Mapbox Geocoder 
-        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
-        <link
-            rel="stylesheet"
-            href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
-            type="text/css"
-        /> -->
         <!-- Internal Scripts -->
         <script src="./public/browser/mapbox/setmap.js"></script>
-        <script src="./public/browser/mapbox/getmarkers.js"></script>
         <script src="./public/browser/controls/dropclear.js"></script>
+        <script src="./public/browser/animations/drawcoords.js"></script>
+        <script src="./public/browser/animations/onstart.js"></script>
+        <script src="./public/browser/controls/visualize.js"></script>
+        <script src="./public/browser/algorithms/twoopt.js"></script>
+        <script src="./public/browser/algorithms/depthfirst.js"></script>
+        <script src="./public/browser/algorithms/lexicographic.js"></script>
+        <script src="./public/browser/algorithms/genetical.js"></script>
         <script src="./public/styling/dropdown.js"></script>
-        <!--  <script> window.onbeforeunload = () => { return 'Reload?';} </script>  -->
+        <script> window.onbeforeunload = () => { return 'Reload?';} </script>
+        <script>onLoadPins()</script>
     </body>
 </html>

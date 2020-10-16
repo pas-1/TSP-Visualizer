@@ -18,31 +18,25 @@ const map = new mapboxgl.Map({
     center: [11.41, 50.52],
 })
 
-/* map.addControl(
-    new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl,
-    })
-) */
+// Contains the user's set coords.
+let containerPins = []
 
-// User pins.
-containerPins = []
-
+// Set user pins to the map.
 function setPins(e) {
     if (document.getElementById('drop-btn').innerText === ' Lock Map') {
         e.preventDefault()
         const el = document.createElement('div')
         el.className = 'marker'
         el.innerText = '📍'
-        el.style.fontSize = '1.25rem'
+        el.style.fontSize = '1.1rem'
 
         el.addEventListener('click', (e) => {
             e.stopPropagation()
         })
 
         let marker = new mapboxgl.Marker(el).setLngLat(e.lngLat).addTo(map)
-        containerPins.push(e.lngLat)
-    } else return
+        containerPins.push([e.lngLat.lng, e.lngLat.lat])
+    } else return true
 }
 
 map.on('click', setPins)

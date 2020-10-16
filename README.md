@@ -17,8 +17,5 @@ tba
 
 HTML
 CSS
-React Bootstrap
-Font Awesome
-Javascript
-React
-Mapbox
+Bootstrap
+Vanilla JavaScript
