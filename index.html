@@ -2,46 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="initial-scale=1,maximum-scale=1,user-scalable=no"
-        />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
         <link rel="stylesheet" href="./public/styling/style.css" />
-        <link
-            rel="icon"
-            type="image/png"
-            href="./public/styling/favicons/favicon.ico"
-        />
-        <script
-            src="https://kit.fontawesome.com/3da1a747b2.js"
-            crossorigin="anonymous"
-        ></script>
+        <link rel="icon" type="image/png" href="./public/styling/favicon.ico"/>
+        <script src="https://kit.fontawesome.com/3da1a747b2.js" crossorigin="anonymous"></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
-        <link
-            href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-            crossorigin="anonymous"
-        />
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
         <title>Travelling-Salesman-Visualizer</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="navbar">
             <a class="navbar-brand" href="#">TSP-Visualizer</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -60,20 +34,15 @@
                             class="dropdown-menu"
                             aria-labelledby="navbarDropdownMenuLink"
                         >
-                            <a class="dropdown-item" href="#">Depth First Search</a>
-                            <a class="dropdown-item" href="#">Lexicographic Ordering</a>
-                            <a class="dropdown-item" href="#">Two-Opt Search</a>
-                            <a class="dropdown-item" href="#">Genetic Algorithm</a>
+                            <a class="dropdown-item" href="#" id="dfs-btn">Depth First Search</a>
+                            <a class="dropdown-item" href="#" id="lexico-btn">Lexicographic Ordering</a>
+                            <a class="dropdown-item" href="#" id="twoopt-btn">Two-Opt Search</a>
+                            <a class="dropdown-item" href="#" id="genetic-btn">Genetic Algorithm</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"
-                            ><i class="fas fa-calculator"></i> Statistics</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"
-                            ><i class="fas fa-question-circle"></i> Help</a
+                            ><i class="fas fa-question-circle"></i> Tutorial</a
                         >
                     </li>
                 </ul>
@@ -116,17 +85,20 @@
             crossorigin="anonymous"
         ></script>
         <!-- Internal Scripts -->
+        <script src="./public/browser/mapbox/accesstoken.js"></script>
         <script src="./public/browser/mapbox/setmap.js"></script>
+        <script src="./public/browser/mapbox/setpin.js"></script>
         <script src="./public/browser/controls/dropclear.js"></script>
-        <script src="./public/browser/animations/drawcoords.js"></script>
-        <script src="./public/browser/animations/onstart.js"></script>
+        <script src="./public/browser/layout/drawcoords.js"></script>
+        <script src="./public/browser/layout/onstart.js"></script>
         <script src="./public/browser/controls/visualize.js"></script>
-        <script src="./public/browser/algorithms/twoopt.js"></script>
-        <script src="./public/browser/algorithms/depthfirst.js"></script>
-        <script src="./public/browser/algorithms/lexicographic.js"></script>
-        <script src="./public/browser/algorithms/genetical.js"></script>
+        <//script src="./public/browser/algorithms/solverhelpers.js"></script>
+        <//script src="./public/browser/algorithms/twoopt.js"></script>
+        <//script src="./public/browser/algorithms/nearestneighbor.js"></script>
+        <//script src="./public/browser/algorithms/lexicographic.js"></script>
+        <//script src="./public/browser/algorithms/genetic.js"></script>
         <script src="./public/styling/dropdown.js"></script>
         <script> window.onbeforeunload = () => { return 'Reload?';} </script>
-        <script>onLoadPins()</script>
+        <script>onLoadCoords()</script>
     </body>
 </html>
