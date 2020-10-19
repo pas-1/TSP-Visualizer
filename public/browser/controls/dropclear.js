@@ -2,7 +2,8 @@ const dropPins = document.getElementById('drop-btn')
 const removePin = document.getElementById('remove-btn')
 const clearMap = document.getElementById('clear-btn')
 
-function changeDropPins() {
+function changeDropPins(e) {
+   e.preventDefault()
    if (dropPins.innerText === ' Drop Pins') {
       dropPins.innerHTML = ''
       dropPins.innerHTML = `<span><i class="fas fa-lock"></i> Lock Map</span>`
@@ -10,20 +11,16 @@ function changeDropPins() {
       dropPins.innerHTML = ''
       dropPins.innerHTML = `<span><i class="fas fa-map-pin"></i> Drop Pins</span>`
    }
-   // Remove existing layer ids:
-   map.removeLayer('number')
-   map.removeSource('number')
 }
 
-function removeLastPin() {
+function removeLastPin(e) {
+   e.preventDefault()
    const elements = document.getElementsByClassName('marker')
    if (elements.length > 0) {
       elements[0].parentNode.removeChild(elements[0].parentNode.lastChild)
       containerPins.pop()
    } else alert('No Pins on the Map! 🏳️')
    // Remove existing layer ids:
-   map.removeLayer('number')
-   map.removeSource('number')
 }
 
 function deleteDropPins() {
@@ -37,9 +34,6 @@ function deleteDropPins() {
       }
       containerPins.length = 0
    }
-   // Remove existing layer ids:
-   map.removeLayer('number')
-   map.removeSource('number')
 }
 
 // Event Listeners

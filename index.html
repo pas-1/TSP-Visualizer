@@ -19,42 +19,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdownMenuLink"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                        >
-                            Select Algorithm
-                        </a>
-                        <div
-                            class="dropdown-menu"
-                            aria-labelledby="navbarDropdownMenuLink"
-                        >
-                            <a class="dropdown-item" href="#" id="dfs-btn">Depth First Search</a>
-                            <a class="dropdown-item" href="#" id="lexico-btn">Lexicographic Ordering</a>
-                            <a class="dropdown-item" href="#" id="twoopt-btn">Two-Opt Search</a>
-                            <a class="dropdown-item" href="#" id="genetic-btn">Genetic Algorithm</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"
-                            ><i class="fas fa-question-circle"></i> Tutorial</a
-                        >
-                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Dynamic Programming</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Greedy Algorithm</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Local Search Algorithm</a>
+                      </li>
                 </ul>
             </div>
         </nav>
         <div class="map" id="map"></div>
-        <div
-            class="btn-group"
-            id="btn-group"
-            role="group"
-            aria-label="Controls"
-        >
+        <div class="btn-group" id="btn-group" role="group" aria-label="Controls">
             <button type="button" class="btn btn-info" id="drop-btn">
                 <span><i class="fas fa-map-pin"></i> Drop Pins</span>
             </button>
@@ -68,7 +46,6 @@
                 <span><i class="fas fa-rocket"></i> Visualize Path!</span>
             </button>
         </div>
-        <!-- Bootstrap -->
         <script
             src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -84,7 +61,6 @@
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"
         ></script>
-        <!-- Internal Scripts -->
         <script src="./public/browser/mapbox/accesstoken.js"></script>
         <script src="./public/browser/mapbox/setmap.js"></script>
         <script src="./public/browser/mapbox/setpin.js"></script>
@@ -92,12 +68,10 @@
         <script src="./public/browser/layout/drawcoords.js"></script>
         <script src="./public/browser/layout/onstart.js"></script>
         <script src="./public/browser/controls/visualize.js"></script>
-        <//script src="./public/browser/algorithms/solverhelpers.js"></script>
-        <//script src="./public/browser/algorithms/twoopt.js"></script>
-        <//script src="./public/browser/algorithms/nearestneighbor.js"></script>
-        <//script src="./public/browser/algorithms/lexicographic.js"></script>
-        <//script src="./public/browser/algorithms/genetic.js"></script>
-        <script src="./public/styling/dropdown.js"></script>
+        <//script src="./public/browser/algorithms/algohelpers.js"></script>
+        <//script src="./public/browser/algorithms/greedy.js"></script>
+        <//script src="./public/browser/algorithms/dynamic.js"></script>
+        <//script src="./public/browser/algorithms/localsearch.js"></script>
         <script> window.onbeforeunload = () => { return 'Reload?';} </script>
         <script>onLoadCoords()</script>
     </body>
