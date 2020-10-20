@@ -5,10 +5,8 @@ const clearMap = document.getElementById('clear-btn')
 function changeDropPins(e) {
    e.preventDefault()
    if (dropPins.innerText === ' Drop Pins') {
-      dropPins.innerHTML = ''
       dropPins.innerHTML = `<span><i class="fas fa-lock"></i> Lock Map</span>`
    } else if (dropPins.innerText === ' Lock Map') {
-      dropPins.innerHTML = ''
       dropPins.innerHTML = `<span><i class="fas fa-map-pin"></i> Drop Pins</span>`
    }
 }

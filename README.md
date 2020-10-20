@@ -1,4 +1,4 @@
-# Travelling Salesman Visualizer
+# Travelling-Salesman-Visualizer
 
 ## Live Demo
 
@@ -6,7 +6,7 @@ tba
 
 ## About the Travelling-Salesman-Problem (TSP)
 
-The TSP asks: "Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?"
+"A salesman is required to visit each of n given cities once and only once, starting from any city and returning to the original place of departure. What route should be chosen in order to minimize the total distance traveled?"
 
 ## Functionality
 
@@ -16,6 +16,7 @@ tba
 
 -  HTML
 -  CSS
--  Bootstrap 4
+-  Bootstrap
+-  Font Awesome
 -  Vanilla JavaScript
 -  Mapbox

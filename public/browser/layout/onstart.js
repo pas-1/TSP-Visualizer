@@ -1,5 +1,5 @@
 function onLoadCoords() {
-   // Initial set of random coords
+   // Initial random coords.
    const initialCoords = [
       [13.41, 52.52],
       [21.01, 52.22],
