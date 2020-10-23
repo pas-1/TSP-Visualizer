@@ -1,4 +1,4 @@
-let distanceMatrix
+let distanceMatrix = []
 let correctCoords = []
 
 function createDistanceMatrix() {
@@ -59,4 +59,13 @@ function createCoordOrder() {
    for (i = 0; i < numPathList.length; i++) {
       correctCoords.push(containerPins[numPathList[i]])
    }
+   console.log(result.vtx)
+}
+
+function clearUI() {
+   nodes = []
+   distances = {}
+   result = {}
+   correctCoords = []
+   distanceMatrix = []
 }

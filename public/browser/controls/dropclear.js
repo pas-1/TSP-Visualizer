@@ -16,6 +16,7 @@ function changeDropPins(e) {
    } else if (dropPins.innerText === ' Lock Map') {
       dropPins.innerHTML = `<span><i class="fas fa-map-pin"></i> Drop Pins</span>`
    }
+   correctCoords.length != 0 ? deleteOld() : console.log('Map is clear')
 }
 
 function removeLastPin(e) {

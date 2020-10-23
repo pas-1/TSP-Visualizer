@@ -14,6 +14,8 @@ function drawLine() {
    // Add line from coordinates.
    map.addLayer({
       id: 'number',
+      minzoom: 3,
+      maxzoom: 9,
       source: {
          type: 'geojson',
          data: {

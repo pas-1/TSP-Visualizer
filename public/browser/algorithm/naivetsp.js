@@ -1,44 +1,72 @@
-const { NaiveTsp } = require('naive-tsp')
+// Nodes as chars.
+let nodes = []
 
-let nodes = ['A', 'B', 'C', 'D']
+// Distances between node pairs.
+let distances = {}
 
-let distances = {
-   AB: 7.605918747922569,
-   AC: 11.649858368237789,
-   AD: 2.548038461248177,
-   AE: 3.2723233336575985,
-   AF: 4.989849697135172,
-   AG: 17.234761385061297,
-   AH: 15.040960740591009,
-   AI: 9.213604072240136,
-   AJ: 9.884862163935319,
-   BA: 7.605918747922569,
-   BC: 18.96009493647118,
-   BD: 8.922023313128026,
-   BE: 9.130941901030804,
-   BF: 3.6269270739842585,
-   BG: 9.67331380655047,
-   BH: 9.300026881681577,
-   BI: 4.790668011874753,
-   BJ: 8.02312283341094,
-   CA: 11.649858368237789,
-   CB: 18.96009493647118,
-   CD: 11.811185376582657,
-   CE: 12.278293855418188,
-   CF: 16.635053351282046,
-   CG: 28.2148365226524,
-   CH: 24.149792959775038,
-   CI: 18.794480572763906,
-   CJ: 17.31624959395076,
-   DA: 2.548038461248177,
-   DB: 8.922023313128026,
-   DC: 11.811185376582657,
-   DE: 0.782304288624319,
-   DF: 5.58914125783201,
-   DG: 18.56132807748411,
-   DH: 17.15543645612084,
-   DI: 11.383716440600582,
-   DJ: 12.371297425896769,
+// Container for final values.
+let result = {}
+
+function getTspDistances() {
+   return (result = new NaiveTsp(nodes, distances, 'A'))
 }
 
-let result = new NaiveTsp(nodes, distances, 'A')
+class NaiveTsp {
+   constructor(vtx, edg, start) {
+      this.vtx = vtx.slice(0)
+      this.edg = edg
+      this.start = start
+      this.vtx.push(this.start)
+   }
+
+   shortestPath() {
+      let permuts = []
+      this.getAllPossiblePermuts(this.vtx, permuts)
+
+      let pathLength = Number.MAX_VALUE
+      let path = []
+      permuts.forEach((el) => {
+         let sum = 0
+         for (let i = 0; i < el.length - 1; i++) {
+            let key = el[i] + el[i + 1]
+            sum = sum + this.edg[key]
+         }
+
+         if (
+            sum < pathLength &&
+            el[0] === this.start &&
+            el[el.length - 1] === this.start
+         ) {
+            pathLength = sum
+            path = el
+         }
+      })
+      return {
+         path: path,
+         length: pathLength,
+      }
+   }
+
+   getPermuts(array, start, result) {
+      if (start >= array.length) {
+         const arr = array.slice(0)
+         result.push(arr)
+      } else {
+         let i
+         for (i = start; i < array.length; ++i) {
+            this.swap(array, start, i)
+            this.getPermuts(array, start + 1, result)
+            this.swap(array, start, i)
+         }
+      }
+   }
+   getAllPossiblePermuts(array, result) {
+      this.getPermuts(array, 0, result)
+   }
+
+   swap(array, from, to) {
+      const tmp = array[from]
+      array[from] = array[to]
+      array[to] = tmp
+   }
+}

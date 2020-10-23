@@ -5,8 +5,7 @@ function setPins(e) {
       e.preventDefault()
       const el = document.createElement('div')
       el.className = 'marker'
-      el.innerText = '🔴'
-
+      containerPins.length === 0 ? (el.innerText = '🟢') : (el.innerText = '🔴')
       el.addEventListener('click', (e) => {
          e.stopPropagation()
       })

@@ -1,13 +1,13 @@
 function onLoadCoords() {
    // Initial random coords.
    const initialCoords = [
-      [12.5, 54.9],
-      [12.56, 55.68],
-      [18.06, 54.33],
+      [10.12, 54.32],
+      [11.97, 57.71],
+      [21.01, 52.23],
       [30.52, 50.45],
       [26.09, 44.43],
       [21.09, 47.43],
-      [19.09, 44.43],
+      [13.4, 52.52],
    ]
    // Add pins to mapbox.
    function initialPins(input) {
@@ -17,7 +17,7 @@ function onLoadCoords() {
       el.addEventListener('click', (e) => {
          e.stopPropagation()
       })
-      new mapboxgl.Marker(el).setLngLat(input).addTo(map)
+      const marker = new mapboxgl.Marker(el).setLngLat(input).addTo(map)
    }
    initialCoords.forEach((elem) => initialPins(elem))
    initialCoords.forEach((elem) => containerPins.push(elem))
