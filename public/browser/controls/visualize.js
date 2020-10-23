@@ -1,14 +1,12 @@
-const visualizeAlgo = document.getElementById('start-btn')
+const runVisualize = document.getElementById('start-btn')
 
-function runVisual(e) {
+function visualize(e) {
    e.preventDefault()
    createDistanceMatrix()
-   if (visualizeAlgo.innerText === ' Visualize Path!') {
-      visualizeAlgo.innerHTML = `<span><i class="fas fa-stop"></i> Stop Visual</span>`
-   } else if (visualizeAlgo.innerText === ' Stop Visual') {
-      visualizeAlgo.innerHTML = `<span><i class="fas fa-rocket"></i> Visualize Path!</span>`
-   }
+   createDistancesObj()
+   createCoordOrder()
+   drawLine()
 }
 
 // Event listeners
-visualizeAlgo.addEventListener('click', runVisual)
+runVisualize.addEventListener('click', visualize)
