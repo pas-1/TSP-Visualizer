@@ -1,8 +1,9 @@
 const dropPins = document.getElementById('drop-btn')
 const removePin = document.getElementById('remove-btn')
 const clearMap = document.getElementById('clear-btn')
+const elements = document.getElementsByClassName('marker')
 
-function deleteOld() {
+function removeOldData() {
    map.removeLayer('number')
    map.removeSource('number')
    correctCoords.length = 0
@@ -16,32 +17,28 @@ function changeDropPins(e) {
    } else if (dropPins.innerText === ' Lock Map') {
       dropPins.innerHTML = `<span><i class="fas fa-map-pin"></i> Drop Pins</span>`
    }
-   correctCoords.length != 0 ? deleteOld() : console.log('Map is clear')
+   correctCoords.length != 0 ? removeOldData() : console.log('Map is ready')
 }
 
 function removeLastPin(e) {
    e.preventDefault()
-   const elements = document.getElementsByClassName('marker')
    if (elements.length > 0) {
       elements[0].parentNode.removeChild(elements[0].parentNode.lastChild)
       containerPins.pop()
    } else alert('No Pins on the Map! 🏳️')
-   correctCoords.length != 0 ? deleteOld() : console.log('Map is clear')
+   correctCoords.length != 0 ? removeOldData() : console.log('Map is ready')
 }
 
 function deleteDropPins(e) {
    e.preventDefault()
    function runDeletePins() {
-      const elements = document.getElementsByClassName('marker')
-      while (elements.length > 0) {
+      while (elements.length > 0)
          elements[0].parentNode.removeChild(elements[0])
-      }
       containerPins.length = 0
    }
-   if (containerPins.length === 0) {
-      alert('No Pins on the Map! 🏳️')
-   } else if (confirm('Do you want to clear all Pins? 🗺️')) runDeletePins()
-   correctCoords.length != 0 ? deleteOld() : console.log('Map is clear')
+   if (containerPins.length === 0) alert('No Pins on the Map! 🏳️')
+   else if (confirm('Do you want to delete all Pins? 🗺️')) runDeletePins()
+   correctCoords.length != 0 ? removeOldData() : console.log('Map is ready')
 }
 
 // Event listeners

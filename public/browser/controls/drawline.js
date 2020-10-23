@@ -1,17 +1,13 @@
 function drawLine() {
-   // Create tuples from coords for Mapbox.
+   // Create coordinate tuples for Mapbox.
    let output = correctCoords
       .flatMap((i) => [i, i])
       .slice(1, 2 * correctCoords.length - 1)
       .reduce((r, a, i) => {
-         if (i % 2) {
-            r[r.length - 1].push(a)
-         } else {
-            r.push([a])
-         }
+         i % 2 ? r[r.length - 1].push(a) : r.push([a])
          return r
       }, [])
-   // Add line from coordinates.
+   // Draw the lines.
    map.addLayer({
       id: 'number',
       minzoom: 3,

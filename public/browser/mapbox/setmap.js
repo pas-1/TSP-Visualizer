@@ -1,4 +1,3 @@
-// Day & night map mode.
 function setDayNightMap() {
    const curTime = new Date().getHours()
    if (curTime > 8 && curTime < 19) {
@@ -6,7 +5,6 @@ function setDayNightMap() {
    } else return 'mapbox://styles/mapbox/dark-v10?optimize=true'
 }
 
-// Map layers.
 const map = new mapboxgl.Map({
    container: 'map',
    style: setDayNightMap(),

@@ -2,11 +2,9 @@ let distanceMatrix = []
 let correctCoords = []
 
 function createDistanceMatrix() {
-   // Distance between two coords.
    function distance(coord1, coord2) {
       return Math.hypot(coord1[0] - coord2[0], coord1[1] - coord2[1])
    }
-   // Multidimensional distance matrix array.
    distanceMatrix = new Array(containerPins.length)
    for (i = 0; i < containerPins.length; i++) {
       distanceMatrix[i] = new Array(containerPins.length)
@@ -53,13 +51,12 @@ function createCoordOrder() {
       return letter.toLowerCase().charCodeAt(0) - 97
    }
    let numPathList = []
-   for (i = 0; i < result.vtx.length; i++) {
-      numPathList.push(toNumbers(result.vtx[i]))
+   for (i = 0; i < result.path.length; i++) {
+      numPathList.push(toNumbers(result.path[i]))
    }
    for (i = 0; i < numPathList.length; i++) {
       correctCoords.push(containerPins[numPathList[i]])
    }
-   console.log(result.vtx)
 }
 
 function clearUI() {

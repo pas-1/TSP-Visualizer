@@ -8,6 +8,7 @@ function visualize(e) {
    getTspDistances()
    createCoordOrder()
    drawLine()
+   console.log(result)
 }
 
 // Event listeners

@@ -9,18 +9,18 @@
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
         <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
-        <title>Travelling-Salesman-Visualizer</title>
+        <title>Travelling-Salesman-Problem Visualizer</title>
     </head>
     <body>
         <div class="map" id="map"></div>
         <div class="btn-group" id="btn-group" role="group" aria-label="Controls">
-            <button type="button" class="btn btn-info" id="drop-btn">
+            <button type="button" class="btn btn-primary" id="drop-btn">
                 <span><i class="fas fa-map-pin"></i> Drop Pins</span>
             </button>
-            <button type="button" class="btn btn-info" id="remove-btn">
+            <button type="button" class="btn btn-primary" id="remove-btn">
                 <span><i class="fas fa-eraser"></i> Remove Pin</span>
             </button>
-            <button type="button" class="btn btn-info" id="clear-btn">
+            <button type="button" class="btn btn-primary" id="clear-btn">
                 <span><i class="fas fa-map"></i></i> Clear Map</span>
             </button>
             <button type="button" class="btn btn-danger" id="start-btn">
@@ -38,7 +38,6 @@
         <script src="./public/browser/algorithm/naivetsp.js"></script>
         <script src="./public/browser/algorithm/helpers.js"></script>
         <script src="./public/browser/controls/visualize.js"></script>
-        <script> window.onbeforeunload = () => { return 'Reload?';} </script>
-        <script>onLoadCoords()</script>
+        <script>onLoadCoords(); window.onbeforeunload = () => { return 'Reload?';} </script>
     </body>
 </html>
