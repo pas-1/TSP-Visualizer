@@ -1,4 +1,4 @@
-//const { NaiveTsp } = require('naive-tsp')
+const { NaiveTsp } = require('naive-tsp')
 
 let nodes = ['A', 'B', 'C', 'D']
 
@@ -41,7 +41,4 @@ let distances = {
    DJ: 12.371297425896769,
 }
 
-//let result = new NaiveTsp(nodes, distances, 'A')
-let result = ['A', 'E', 'C', 'D', 'B']
-
-//console.log(result.vtx)
+let result = new NaiveTsp(nodes, distances, 'A')

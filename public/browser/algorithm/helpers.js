@@ -53,8 +53,8 @@ function createCoordOrder() {
       return letter.toLowerCase().charCodeAt(0) - 97
    }
    let numPathList = []
-   for (i = 0; i < result.length; i++) {
-      numPathList.push(toNumbers(result[i]))
+   for (i = 0; i < result.vtx.length; i++) {
+      numPathList.push(toNumbers(result.vtx[i]))
    }
    for (i = 0; i < numPathList.length; i++) {
       correctCoords.push(containerPins[numPathList[i]])

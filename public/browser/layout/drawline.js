@@ -1,5 +1,5 @@
 function drawLine() {
-   // Create tuples from coords.
+   // Create tuples from coords for Mapbox.
    let output = correctCoords
       .flatMap((i) => [i, i])
       .slice(1, 2 * correctCoords.length - 1)
