@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-https://ps6790.github.io/TSP-Visualizer
+https://tsp-visualizer.netlify.app/
 
 ## About the Travelling-Salesman-Problem (TSP)
 
