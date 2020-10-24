@@ -12,7 +12,7 @@ https://ps6790.github.io/TSP-Visualizer
 
 I built this app due to my fascination for the TSP and to visualize an algorithmic solution.
 
-The implemented brute force algorithm calculates optimal routes with up to 9 selected points.
+The brute force algorithm calculates and visualizes optimal routes with up to 9 selected points.
 
 ## Built with
 
