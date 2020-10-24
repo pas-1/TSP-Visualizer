@@ -1,13 +1,6 @@
-// Nodes as chars.
 let nodes = []
-
-// Distances between node pairs.
 let distances = {}
-
-// Container for final values.
 let result = {}
-
-// Initial length to start with.
 let initlen
 
 function getTspDistances() {
@@ -24,11 +17,9 @@ class NaiveTsp {
    }
 
    existsShorter(initlen) {
-      // generate all permutations
       let permuts = []
       this.getAllPossiblePermuts(this.vtx, permuts)
 
-      // iterate permutations. A for loop is used here instead of forEach since we might need early exit
       for (i = 0; i < permuts.length; i++) {
          let sum = 0
          let el = permuts[i]
@@ -36,7 +27,7 @@ class NaiveTsp {
             let key = el[j] + el[j + 1]
             sum = sum + this.edg[key]
          }
-         // return true only if path is shorter, starts and ends in the same node
+
          if (sum < parseInt(initlen) && el[0] === el[el.length - 1]) {
             return {
                exists: true,

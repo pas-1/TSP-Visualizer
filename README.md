@@ -1,22 +1,24 @@
-# Travelling-Salesman-Visualizer
+# Travelling-Salesman-Problem Visualizer
 
 ## Live Demo
 
-tba
+https://ps6790.github.io/TSP-Visualizer
 
 ## About the Travelling-Salesman-Problem (TSP)
 
-"A salesman is required to visit each of n given cities once and only once, starting from any city and returning to the original place of departure. What route should be chosen in order to minimize the total distance traveled?"
+"A salesman is required to visit given cities once and only once, starting from any city and returning to the original place of departure. What route should be chosen in order to minimize the total distance traveled?"
 
 ## Functionality
 
-tba
+I built this app due to my fascination for the TSP and to visualize an algorithmic solution.
+
+The implemented brute force algorithm calculates optimal routes with up to 9 selected points.
 
 ## Built with
 
 -  HTML
 -  CSS
--  Bootstrap
+-  Bootstrap 4
 -  Font Awesome
 -  Vanilla JavaScript
--  Mapbox
+-  Mapbox GL JS
