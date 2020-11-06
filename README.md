@@ -10,9 +10,9 @@ https://tsp-visualizer.netlify.app/
 
 ## Functionality
 
-I built this app due to my fascination for the TSP and to visualize an algorithmic solution.
+I built this app due to my fascination for an algorithmic visualization of the TSP.
 
-The brute force algorithm calculates and visualizes optimal routes with up to 9 selected points.
+The brute force algorithm visualizes optimal routes with up to 9 selected points.
 
 ## Built with
 
