@@ -10,7 +10,8 @@ https://tsp-visualizer.netlify.app/
 
 ## Functionality
 
-I built this app due to my fascination for an algorithmic visualization of the TSP. The brute force algorithm visualizes optimal routes with up to 9 selected points.
+* Find Stack Overflow user profiles via keyword search
+* Inspect the description, reputation and most liked threads
 
 ## Built with
 
