@@ -10,8 +10,8 @@ https://tsp-visualizer.netlify.app/
 
 ## Functionality
 
-* Find Stack Overflow user profiles via keyword search
-* Inspect the description, reputation and most liked threads
+* Add and remove location points ('pins') on click on a virtual earth map
+* Find the shortest route via brute force algorithm with up to 9 selected points
 
 ## Built with
 
